@@ -136,7 +136,7 @@ for y in range(height):
 for y in range(256):
     hist_blue_img1[y] = hist_blue_img1[y] / (255 * 255)
     hist_green_img1[y] = hist_green_img1[y] / (255 * 255)
-    hist_green_img1[y] = hist_red_img1[y] / (255 * 255)
+    hist_red_img1[y] = hist_red_img1[y] / (255 * 255)
 
 plt.subplot(221)
 plt.imshow(cv2.cvtColor(img1, cv2.COLOR_BGR2RGB))
