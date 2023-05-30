@@ -3,8 +3,8 @@ from matplotlib import pyplot as plt
 import numpy as np
 import math
 
-img1 = cv2.imread('lena.png')
-img2 = cv2.imread('unequalized.jpg')
+img1 = cv2.imread("lena.png")
+img2 = cv2.imread('atividade2/unequalized.jpg')
 
 height = img1.shape[0] #altura
 width = img1.shape[1] #largura 
@@ -76,7 +76,7 @@ plt.show()
 
 
 k = 0.025
-# s_sigmoid = (255 / (1 + np.exp(-k * (z - 127)))).astype(np.uint8) form sigmoid
+# s_sigmoid = (255 / (1 + np.exp(-k * (z - 127)))).astype(np.uint8) formula sigmoid
 
 plt.figure(figsize=(6,6))
 img1_invertlog = (255 / (1 + np.exp(-k * (img1.astype(np.int32) - 127)))).astype(np.uint8)
@@ -103,7 +103,7 @@ plt.imshow(img1_thresh, cmap="gray")
 plt.axis("off")
 plt.show()
 
-# thresh = cv2.threshold(img_pb, 100, 255, cv2.THRESH_BINARY)    ou _INV / TRUNC / TOZERO / OTSU
+# thresh = cv2.threshold(img_pb, 100, 255, cv2.THRESH_BINARY)  ou _INV / TRUNC / TOZERO / OTSU
 
 plt.figure(figsize=(12,12))
 plt.subplot(121)

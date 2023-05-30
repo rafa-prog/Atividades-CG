@@ -31,7 +31,7 @@ cv2.imwrite("saida1.jpg", img)
 
 # Parte 2
 
-img = cv2.imread( 'lena.png') #abrir a imagem
+img = cv2.imread('atividade1/messi.jpg') #abrir a imagem
 print(img) #Mostra os pixels
 #Mostra a imagem a com a função imshow
 cv2.imshow("Nome da janela", img)
