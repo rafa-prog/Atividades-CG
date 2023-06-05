@@ -136,7 +136,7 @@ for y in range(height):
 for y in range(256):
     hist_blue_img1[y] = hist_blue_img1[y] / (255 * 255)
     hist_green_img1[y] = hist_green_img1[y] / (255 * 255)
-    hist_green_img1[y] = hist_red_img1[y] / (255 * 255)
+    hist_red_img1[y] = hist_red_img1[y] / (255 * 255)
 
 plt.subplot(221)
 plt.imshow(cv2.cvtColor(img1, cv2.COLOR_BGR2RGB))
@@ -156,3 +156,16 @@ plt.bar(range(256), hist_red_img1, color="red")
 plt.xlabel("valor de intensidade")
 plt.ylabel("frequencia")
 plt.show()
+
+
+img2_pb = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
+equalized_image = cv2.equalizeHist(img2_pb)
+
+resultado1 = np.hstack((img2_pb, equalized_image)) # colocando imagens juntas
+cv2.imwrite('atividade2/resultado1.png',resultado1)
+
+
+equalized_image = cv2.equalizeHist(img_pb)
+
+resultado2 = np.hstack((img_pb, equalized_image)) # colocando imagens juntas
+cv2.imwrite('atividade2/resultado2.png',resultado2)
