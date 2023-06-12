@@ -1,0 +1,1 @@
+cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
